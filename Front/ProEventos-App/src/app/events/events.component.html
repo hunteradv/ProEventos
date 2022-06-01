@@ -1,10 +1,11 @@
 <h2>Eventos</h2>
 <hr>
 
-<div class="row row-cols-lg-auto g-3 align-items-center">
+<div class="row row-cols-lg-auto g-3 align-items-center mb-3">
   <div>
     <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
     <div class="input-group">
+      <label class="me-3">Filtro: </label>
       <input
       type="text"
       class="form-control"
@@ -12,13 +13,10 @@
       [(ngModel)]="listFilter"
       >
     </div>
-    <div>
-      <button class="btn btn-outline-success">Buscar</button>
-    </div>
   </div>
 </div>
 
-<h3>Filtro: {{listFilter}}</h3>
+<!-- <h3>Filtro: {{listFilter}}</h3> -->
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
@@ -53,7 +51,10 @@
       <td class="text-center">{{event.eventDate}}</td>
       <td class="text-center">{{event.peopleQuantity}}</td>
       <td class="text-center">{{event.batch}}</td>
-      <td class="text-center"></td>
+      <td class="text-center">
+        <button type="button" class="btn btn-primary btn-sm me-2">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+      </td>
     </tr>
   </tbody>
   <tfoot *ngIf="!events.length">
