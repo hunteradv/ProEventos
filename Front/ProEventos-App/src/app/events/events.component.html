@@ -31,13 +31,13 @@
 
   <tbody>
     <tr *ngFor="let event of events">
-      <td class="text-center" scope="row">1</td>
-      <td class="text-center"></td>
-      <td class="text-center"></td>
-      <td class="text-center"></td>
-      <td class="text-center"></td>
-      <td class="text-center"></td>
-      <td class="text-center"></td>
+      <td class="text-center" scope="row">{{event.eventId}}</td>
+      <td class="text-center">{{event.imageUrl}}</td>
+      <td class="text-center">{{event.title}}</td>
+      <td class="text-center">{{event.local}}</td>
+      <td class="text-center">{{event.eventDate}}</td>
+      <td class="text-center">{{event.peopleQuantity}}</td>
+      <td class="text-center">{{event.batch}}</td>
       <td class="text-center"></td>
     </tr>
   </tbody>
