@@ -39,7 +39,7 @@
   </thead>
 
   <tbody *ngIf="events && events.length">
-    <tr *ngFor="let event of events">
+    <tr *ngFor="let event of filteredEvents">
       <td class="text-center">
         <img [collapse]="!showImage"
              [isAnimated]="true"
