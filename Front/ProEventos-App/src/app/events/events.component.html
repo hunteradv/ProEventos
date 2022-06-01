@@ -18,8 +18,13 @@
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
+      <th class="text-center" scope="col">
+        <button type="button" class="btn btn-outline-light btn-sm"
+        (click)="alterImage()">
+        {{!showImage ? 'Exibir' : 'Ocultar'}}
+        </button>
+      </th>
       <th class="text-center" scope="col">#</th>
-      <th class="text-center" scope="col">Imagem</th>
       <th class="text-center" scope="col">Tema</th>
       <th class="text-center" scope="col">Local</th>
       <th class="text-center" scope="col">Data</th>
@@ -29,10 +34,16 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody *ngIf="events && events.length">
     <tr *ngFor="let event of events">
+      <td class="text-center">
+        <img [collapse]="!showImage"
+             [isAnimated]="true"
+        src="/assets/{{event.imageUrl}}"
+        [style.width.px]="imgWidth"
+        [style.margin.px]="imgMargin">
+      </td>
       <td class="text-center" scope="row">{{event.eventId}}</td>
-      <td class="text-center">{{event.imageUrl}}</td>
       <td class="text-center">{{event.title}}</td>
       <td class="text-center">{{event.local}}</td>
       <td class="text-center">{{event.eventDate}}</td>
@@ -41,4 +52,11 @@
       <td class="text-center"></td>
     </tr>
   </tbody>
+  <tfoot *ngIf="!events.length">
+    <tr>
+      <td colspan="8" class="text-center">
+        <h4>Nenhum evento encontrado</h4>
+      </td>
+    </tr>
+  </tfoot>
 </table>
