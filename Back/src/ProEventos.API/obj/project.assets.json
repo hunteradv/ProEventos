@@ -505,6 +505,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.2",
           "ProEventos.Domain": "1.0.0"
         },
         "compile": {
@@ -1338,7 +1340,6 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.EntityFrameworkCore >= 5.0.2",
-      "Microsoft.EntityFrameworkCore.Design >= 5.0.2",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.2",
       "ProEventos.Application >= 1.0.0",
@@ -1396,12 +1397,6 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[5.0.2, )"
-          },
-          "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.2, )"
           },

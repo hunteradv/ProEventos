@@ -34,7 +34,6 @@
       "ProEventos.API/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.2",
-          "Microsoft.EntityFrameworkCore.Design": "5.0.2",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.2",
           "ProEventos.Application": "1.0.0",
@@ -725,6 +724,8 @@
       },
       "ProEventos.Persistence/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.2",
           "ProEventos.Domain": "1.0.0"
         },
         "runtime": {
